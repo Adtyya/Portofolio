@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import Works from "./components/Works";
 import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
+import { Helmet } from "react-helmet";
 
 const App = () => {
   const handleTheme = () => {
@@ -26,6 +27,9 @@ const App = () => {
   }, [theme]);
   return (
     <>
+      <Helmet>
+        <meta name="desciption" content="Web Portofolio Aditya" />
+      </Helmet>
       <button
         onClick={handleTheme}
         type="button"
